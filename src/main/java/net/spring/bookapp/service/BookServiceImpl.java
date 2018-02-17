@@ -44,4 +44,10 @@ public class BookServiceImpl implements BookService {
     public List<Book> listBooks() {
         return this.bookDao.listBooks();
     }
+
+    @Override
+    @Transactional
+    public void readBook(int id) {
+        this.bookDao.readBook(id);
+    }
 }

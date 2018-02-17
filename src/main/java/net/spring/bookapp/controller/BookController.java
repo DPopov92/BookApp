@@ -62,9 +62,11 @@ public class BookController {
         return "bookdata";
     }
 
-//    @RequestMapping("/read/{id}")
-//    public String readAlredy(@PathVariable("id") int id){
-//        this
-//    }
+    @RequestMapping("/read/{id}")
+    public String readAlredy(@PathVariable("id") int id){
+        this.bookService.readBook(id);
+
+        return "redirect:/books";
+    }
 
 }

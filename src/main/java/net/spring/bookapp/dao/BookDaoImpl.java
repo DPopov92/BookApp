@@ -65,4 +65,14 @@ public class BookDaoImpl implements BookDao {
 
         return bookList;
     }
+
+    @Override
+    public void readBook(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        Book book = (Book) session.load(Book.class, new Integer(id));
+        if(book!=null) {
+            book.setReadAlready((byte) 1);
+            logger.info("Book is read already: " + book);
+        }
+    }
 }
