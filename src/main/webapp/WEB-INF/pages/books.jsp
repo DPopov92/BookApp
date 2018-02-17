@@ -60,7 +60,7 @@
             <th width="80">ID</th>
             <th width="120">Title</th>
             <th width="120">Author</th>
-            <th width="120">Discription</th>
+            <th width="120">Description</th>
             <th width="80">Print Year</th>
             <th width="80">ISBN</th>
             <th width="80">Read Already</th>
@@ -76,8 +76,15 @@
                 <td>${book.description}</td>
                 <td>${book.printYear}</td>
                 <td>${book.isbn}</td>
-                <td>${book.readAlready}</td>
-                <td><a href="<c:url value='/read/${book.id}'/>">Read</a></td>
+                <td>
+                <c:if test="${book.readAlready!=0}">
+                    true
+                </c:if>
+                <c:if test="${book.readAlready==0}">
+                       false
+                </c:if>
+                </td>
+                <td><a href="<c:url value='/read/${book.id}'/>">  Read</a></td>
                 <td><a href="<c:url value='/edit/${book.id}'/>">Update</a></td>
                 <td><a href="<c:url value='/remove/${book.id}'/>">Delete</a></td>
             </tr>
