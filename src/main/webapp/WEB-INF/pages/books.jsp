@@ -84,7 +84,7 @@
                        false
                 </c:if>
                 </td>
-                <td><a href="<c:url value='/read/${book.id}'/>">  Read</a></td>
+                <td><a href="<c:url value='/read/${book.id}'/>">Read</a></td>
                 <td><a href="<c:url value='/edit/${book.id}'/>">Update</a></td>
                 <td><a href="<c:url value='/remove/${book.id}'/>">Delete</a></td>
             </tr>

@@ -68,7 +68,14 @@
     <td>${book.description}</td>
     <td>${book.printYear}</td>
     <td>${book.isbn}</td>
-    <td>${book.readAlready}</td>
+    <td>
+      <c:if test="${book.readAlready!=0}">
+        true
+      </c:if>
+      <c:if test="${book.readAlready==0}">
+        false
+      </c:if>
+    </td>
   </tr>
 </table>
 </body>
