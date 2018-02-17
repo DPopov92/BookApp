@@ -16,6 +16,17 @@ public class Book {
     private String description;
     private int printYear;
     private String isbn;
+    private byte readAlready;
+
+    @Basic
+    @Column(name = "readAlready",nullable = false)
+    public byte getReadAlready() {
+        return readAlready;
+    }
+
+    public void setReadAlready(byte readAlready) {
+        this.readAlready = readAlready;
+    }
 
     @Id
     @Column(name = "id", nullable = false)
