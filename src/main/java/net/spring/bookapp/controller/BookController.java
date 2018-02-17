@@ -51,7 +51,6 @@ public class BookController {
     public String editBook(@PathVariable("id") int id, Model model){
         model.addAttribute("book", this.bookService.getBookById(id));
         model.addAttribute("listBooks", this.bookService.listBooks());
-
         return "books";
     }
 

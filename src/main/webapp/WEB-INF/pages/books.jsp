@@ -63,6 +63,7 @@
             <th width="120">Discription</th>
             <th width="80">Print Year</th>
             <th width="80">ISBN</th>
+            <th width="80">Read Already</th>
             <th width="60">Read</th>
             <th width="60">Update</th>
             <th width="60">Delete</th>
@@ -75,8 +76,9 @@
                 <td>${book.description}</td>
                 <td>${book.printYear}</td>
                 <td>${book.isbn}</td>
+                <td>${book.readAlready}</td>
                 <td><a href="<c:url value='/read/${book.id}'/>">Read</a></td>
-                <td><a href="<c:url value='/edit/${book.id}'/>">Edit</a></td>
+                <td><a href="<c:url value='/edit/${book.id}'/>">Update</a></td>
                 <td><a href="<c:url value='/remove/${book.id}'/>">Delete</a></td>
             </tr>
         </c:forEach>
@@ -157,7 +159,7 @@
             <td colspan="2">
                 <c:if test="${!empty book.title}">
                     <input type="submit"
-                           value="<spring:message text="Edit Book"/>"/>
+                           value="<spring:message text="Update Book"/>"/>
                 </c:if>
                 <c:if test="${empty book.title}">
                     <input type="submit"

@@ -30,6 +30,7 @@ public class BookDaoImpl implements BookDao {
     public void updateBook(Book book) {
         Session session = this.sessionFactory.getCurrentSession();
         session.update(book);
+        book.setReadAlready((byte)0);
         logger.info("Book successfully update. Book details: " + book);
     }
 

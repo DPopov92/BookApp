@@ -59,6 +59,7 @@
     <th width="120">Discription</th>
     <th width="80">Print Year</th>
     <th width="80">ISBN</th>
+    <th width="80">Read Already</th>
   </tr>
   <tr>
     <td>${book.id}</td>
@@ -67,6 +68,7 @@
     <td>${book.description}</td>
     <td>${book.printYear}</td>
     <td>${book.isbn}</td>
+    <td>${book.readAlready}</td>
   </tr>
 </table>
 </body>
